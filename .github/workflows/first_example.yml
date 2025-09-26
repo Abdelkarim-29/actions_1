@@ -8,9 +8,11 @@ jobs:
         - name: checkout Repo
           uses: actions/checkout@v5  
         - name: welcome
-          run: echo "abdelkarim"
-        - name: list files
-          run: ls
-        - name: read file
-          run : cat README.md   
+          run: |
+            echo "abdelkarim"
+            ls -ltra
+            cat README.md
+        - name: genrate ASCI 
+          run: cowsay -f dragon tux "I am Linux" >> dragon.txt
+    
 
