@@ -12,12 +12,9 @@ jobs:
             echo "abdelkarim"
             ls -ltra
             cat README.md
-        - name: genrate ASCI 
-          run: |
-            sudo apt install cowsay
-            cowsay -f dragon tux "I am Linux" >> dragon.txt
-            grep -i "dragon" dragon.txt
-            cat dragon.txt
+        - name: Excute bash script
+          run: ./script.sh
+
             
     
 
