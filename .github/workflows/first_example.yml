@@ -16,5 +16,8 @@ jobs:
           run: |
             sudo apt install cowsay
             cowsay -f dragon tux "I am Linux" >> dragon.txt
+            grep -i "dragon" dragon.txt
+            cat dragon.txt
+            
     
 
