@@ -13,6 +13,8 @@ jobs:
             ls -ltra
             cat README.md
         - name: genrate ASCI 
-          run: cowsay -f dragon tux "I am Linux" >> dragon.txt
+          run: |
+            sudo apt install cowsay
+            cowsay -f dragon tux "I am Linux" >> dragon.txt
     
 
