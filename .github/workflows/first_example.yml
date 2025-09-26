@@ -5,6 +5,8 @@ jobs:
     first_jop:
         runs-on: ubuntu-latest
         steps:
+        - name: checkout Repo
+          uses: actions/checkout@v5  
         - name: welcome
           run: echo "abdelkarim"
         - name: list files
