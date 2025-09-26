@@ -1,0 +1,14 @@
+name: my first workflow 
+
+on: push 
+jobs: 
+    first_jop:
+        runs-on: ubuntu-latest
+        steps:
+        - name: welcome
+          run: echo "abdelkarim"
+        - name: list files
+          run: ls
+        - name: read file
+          run : cat READE.md   
+
