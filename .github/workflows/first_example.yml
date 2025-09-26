@@ -14,8 +14,8 @@ jobs:
             cat README.md
         - name: Excute bash script
           run: |
-             chmod -R +x
-             ./script.sh
+            chmod -R +x
+            ./script.sh
 
             
     
