@@ -13,5 +13,5 @@ jobs:
         run: |
           ls -ltra
           chmod +x script.sh
-          ./script.sh
+          script.sh
  
