@@ -1,4 +1,4 @@
-name: My First Workflow
+name: My second Workflow
 
 on: push
 
@@ -13,7 +13,7 @@ jobs:
         run: sudo apt-get install cowsay -y 
       - name: Excaute cowsay CMD
         run: cowsay -f dragon "i am dragon" > dragon.txt  
-        
+
       - name: Upload Dragon text File
         uses: actions/upload-artifact@v4
         with:
