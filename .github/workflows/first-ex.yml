@@ -3,11 +3,37 @@ name: My First Workflow
 on: push
 
 jobs:
-  first_job:
+  first_job_build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v4
+
+      - name: Install Cowsay Program
+        run: sudo apt-get install cowsay -y 
+      - name: Excaute cowsay CMD
+        run: cowsay -f dragon "i am dragon" > dragon.txt  
+      - name: sleep
+        run: sleep 30
+  secound_job_test:
+    needs: first_job_build
+    runs-on: ubuntu-latest
+    steps:
+      - name: sleep
+        run: sleep 10
+      - name: test file Exist
+        run: grep -i "dragon" dragon.txt
+  third_job_Deploy:
+    needs: secound_job_test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Read File 
+        run: cat dragon.txt    
+
+
+
+        
+
 
       - name: Shell Script
         run: |
