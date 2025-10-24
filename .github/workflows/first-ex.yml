@@ -13,11 +13,13 @@ jobs:
         run: sudo apt-get install cowsay -y 
       - name: Excaute cowsay CMD
         run: cowsay -f dragon "i am dragon" > dragon.txt  
+        
       - name: Upload Dragon text File
         uses: actions/upload-artifact@v4
         with:
           name: my-dragon
           path: dragon.txt
+
   secound_job_test:
     needs: first_job_build
     runs-on: ubuntu-latest
